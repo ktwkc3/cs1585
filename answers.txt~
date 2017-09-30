@@ -1,0 +1,7 @@
+Student: Kade Wessels		Date: 9/25/2017
+Problem 1:
+  1)Write a command to filter out lines beginning with '#'. (You can test it with story-plain.txt.)
+	sed -r 's/^#.+//' story-plain.txt
+  2)Modify the previous command to filter out lines beginning with whitespace and then '#'as well. (You can test it with story-space.txt)
+	sed -r 's/^\s+#.+//' story-space.txt
+Problem 2:

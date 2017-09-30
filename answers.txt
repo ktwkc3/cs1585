@@ -1,0 +1,20 @@
+Student: Kade Wessels		Date: 9/25/2017
+Problem 1:
+  1)Write a command to filter out lines beginning with '#'. (You can test it with story-plain.txt.)
+	sed -r 's/^#.+//' story-plain.txt
+  2)Modify the previous command to filter out lines beginning with
+      whitespace and then '#'as well. (You can test it with story-space.txt)
+	sed -r 's/^\s+#.+//' story-space.txt
+Problem 2:
+  1) Write a sed command to remove the vowels froma file.
+	sed -r 's/[aeiouy]+//g' *filename*
+Problem 3:
+  1) Write a command that prints out the number of requests in numbers.log
+       made in January
+	grep -o '^.....01' numbers.log | wc -1
+Problem 4:
+  1)Write a grep command to match all the phone numbers in the phonebook.txt
+       file
+	grep -o '[(]\?[0-9]\{3\}[ -)]\?[0-9]\{3\}[ -]\?[0-9]\{4\}' phonebook.txt
+  2)Write a sed command to format all the numbers
+	sed -n 's/^.*[(]\?([0-9]\{3\})[ -)]\?([0-9]\{3})[ -]\?([0-9]\{4\}).*/(\1) \2-\3/g' phonebook.txt
